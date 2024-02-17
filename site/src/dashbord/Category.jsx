@@ -19,8 +19,7 @@ function Category() {
 
   const hamdelbtn = () => {
     if (category == '') {
-      alert('Empty Field')
-      return
+    
     } else {
       setIsButtonEnabled(false)
       axios.post('http://localhost:4002/user/categories/creat', {

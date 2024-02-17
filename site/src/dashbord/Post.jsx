@@ -24,7 +24,7 @@ function Post() {
   }, [])
 
   const hamdelbtn = () => {
-    if (title == '' || body == '' || category == '' || image == '') {
+    if (title == '' || body == '' || category == '' || image == '' || excerpt == '') {
       alert('Empty Field')
     } else {
 

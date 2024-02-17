@@ -6,7 +6,7 @@ const upload = multer({ dest: 'uploads/' })
 const usercontroler=require("../controller/UserControler")
 const postctr=require('../controller/PostControler')
 const comments=require('../controller/CommentsControler')
-const categoryctrl=require('../controller/Cetagory')
+const categories=require('../controller/Cetagory')
 
 
 
@@ -31,7 +31,7 @@ router.delete("/dellcomments/:id",comments.deletecomments)
 // router.get("/software",categoryctrl.softwareCategory)
 
     router.get("/posts/:category?", postctr.getpostctr)
-    router.get("/categories/all", postctr.getCategories);
-    router.post("/categories/creat", postctr.createCategories);
+    router.get("/categories/all",categories.getCategories );
+    router.post("/categories/creat", categories.createCategories);
 
 module.exports=router

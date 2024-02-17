@@ -1,5 +1,5 @@
 const createpost = require('../models/CreatePost');
-const CategoryM = require("../models/Category")
+
 const fs = require('fs')
 // create post  
 
@@ -65,29 +65,7 @@ const getpostctr = async (req, res) => {
     }
 }
 
-const getCategories = async (req, res) => {
 
-    try {
-        const categories = await CategoryM.find();
-        return res.json(categories);
-    } catch (error) {
-        console.log(error.message)
-    }
-};
-
-const createCategories = async (req, res) => {
-
-    try {
-        const categories = await CategoryM.create(req.body);
-        return res.status(200).json({
-            status: true,
-            categories: categories,
-             message: "post created successfully"
-        });
-    } catch (error) {
-        console.log(error.message)
-    }
-};
 
 
 
@@ -155,5 +133,5 @@ const updatapost = async (req, res) => {
     }
 }
 module.exports = {
-    createpostctr, getpostctr, getpostbyidctr, deletepost, updatapost, getCategories, createCategories
+    createpostctr, getpostctr, getpostbyidctr, deletepost, updatapost
 };

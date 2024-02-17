@@ -104,6 +104,7 @@ const header = renderHeader();
           <Column field="action"  header="Actions" body={actionBodyTemplate}></Column>
         </DataTable>
       </div>
+      
     </>
   )
 }

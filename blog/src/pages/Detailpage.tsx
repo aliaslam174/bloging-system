@@ -135,9 +135,11 @@ function Detailpage() {
 
 
            
-            <div className="row g-0">
+          
+            <Container>
+                                    <Row className='p-3'>
 
-<div className="col-lg-10 mx-auto">
+
                 {
 
 
@@ -147,13 +149,16 @@ function Detailpage() {
 
 
                            
-                                    <div className="card-body">
-                                        <p className="card-title">{element.comment}</p>
+                                    // <div className="card-body  ">
+                                    //    
 
 
 
 
-                                    </div>
+                                    // </div>
+                                   
+                                      <Col lg={10} className='mx-auto bg-white'> <p className="card-title">{element.comment}</p></Col>
+                                  
                             
                             )
 
@@ -162,10 +167,10 @@ function Detailpage() {
 
                     })
                 }
-                    </div>
+                    
 
-</div>
-            
+                    </Row>
+                                  </Container>
 
 
         </>

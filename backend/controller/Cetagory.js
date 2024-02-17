@@ -1,40 +1,32 @@
-const createpost = require('../models/CreatePost');
+const CategoryM = require('../models/Category');
 
+const getCategories = async (req, res) => {
 
-
-const mobileCategory = async (req, res) => {
-
-console.log("sdfsdf")
     try {
-        const data = await createpost.find({category:'Gadget'})
-        console.log(data)
-
-        return res.status(201).json({
-            status: true,
-            data: data
-        })
+        const categories = await CategoryM.find();
+        return res.json(categories);
     } catch (error) {
-
+        console.log(error.message)
     }
-}
+};
 
-const softwareCategory = async (req, res) => {
+const createCategories = async (req, res) => {
 
-    console.log("sdfsdf")
-        try {
-            const data = await createpost.find({category:'Softweare'})
-            console.log(data)
-    
-            return res.status(201).json({
-                status: true,
-                data: data
-            })
-        } catch (error) {
-    
-        }
+    try {
+        const categories = await CategoryM.create(req.body);
+        return res.status(200).json({
+            status: true,
+            categories: categories,
+             message: "post created successfully"
+        });
+    } catch (error) {
+        console.log(error.message)
     }
+};
+
+
 
 module.exports={
-    mobileCategory,
-    softwareCategory
+    getCategories,
+    createCategories
 }
