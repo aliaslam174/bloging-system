@@ -19,7 +19,7 @@ function Dashbord() {
 
 
                     <aside className="shadow-2 border-radiou bg-white col-12 lg:col-3 sm:col-12 lg:ml-3 xl:ml-2  lg:mb-0 p-44 sm:mb-5">
-                        <Link to='/dashbord'><h2 className='text-center'>Dashbord</h2></Link>
+                        <Link to='/'><h2 className='text-center'>Dashbord</h2></Link>
                         <ul className='  list-none rounded bg-[##21262C]'>
 
                             <li><Link to="post" className=''>Post</Link></li>

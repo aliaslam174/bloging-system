@@ -17,7 +17,7 @@ function App() {
 
    <ToastContainer />
 <Routes>
-  <Route path='/dashbord' element={<Dashbord/>}>
+  <Route path='/' element={<Dashbord/>}>
   <Route index  element={<Homedashbord/>}/>
     <Route path='post' element={<Post/>}/>
     <Route path='comments' element={<Catagory/>}/>
