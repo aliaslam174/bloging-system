@@ -45,7 +45,7 @@ function Post() {
         .then(function (response) {
           console.log(response.data)
           if (response.data.status == true) {
-            navigate('/dashbord')
+            navigate('/')
           }
 
 
