@@ -12,12 +12,12 @@ app.use(express.static(path.join(__dirname, "uploads")));
 
 // user routes
 
-
-
-app.use("/user",userRoutes)
 app.get("/",(req,res)=>{
     res.json('working')
 })
+
+app.use("/user",userRoutes)
+
 
 // db conect and server listen (4002)
 
