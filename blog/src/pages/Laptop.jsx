@@ -31,7 +31,7 @@ console.log(post)
    return (   <div className="card mb-3 mx-auto mt-5" style={{ maxWidth: 1000 }}>
    <div className="row g-0">
      <div className="col-md-4">
-       <img src={`http://localhost:4002/${element.image}`} className="img-fluid rounded-start" alt="..." width={300}/>
+       <img src={`${element.imageUrl}`} className="img-fluid rounded-start" alt="..." width={300}/>
      </div>
      <div className="col-md-8">
        <div className="card-body">

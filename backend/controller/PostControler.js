@@ -15,7 +15,7 @@ const createpostctr = async (req, res) => {
     try {
 
         console.log(req.body)
-        
+
         // console.log(req.file)
         // // console.log(req.body)
 
@@ -48,11 +48,13 @@ const createpostctr = async (req, res) => {
 
 
 
+
         // create post
-        const newPost = await createpost.create({ content: req.body.content, imageUrl: photoObject.url, authorId: req.userId });
+        const newPost = await createpost.create({excerpt:req.body.excerpt,body:req.body.body,category:req.body.category,title:req.body.title, imageUrl: photoObject.url});
         return res.status(200).json({
             status: true,
-            message: "post created successfully"
+            message: "post created successfully",
+            newPost:newPost
         })
     } catch (error) {
         console.log(error.message)

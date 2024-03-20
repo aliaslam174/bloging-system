@@ -7,7 +7,7 @@ const schema = new mongoose.Schema({
     category:{
         type:String,
     },
-    image:String,
+    imageUrl:String,
     excerpt:String
    
    

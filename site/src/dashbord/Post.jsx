@@ -90,6 +90,7 @@ function Post() {
             <div className="field col-12 ">
               <label htmlFor="state">Catagory</label>
               <select id="state" onChange={(e) => { setcategory(e.target.value) }} className="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" >
+              <option >selct</option>
                 {
                   categories.map((cat) => {
                     return <option value={cat.name}>{cat.name}</option>

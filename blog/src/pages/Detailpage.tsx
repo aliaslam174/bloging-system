@@ -83,7 +83,7 @@ function Detailpage() {
                 <Row className=''>
                     <Col sm={10} className='mx-auto my-5' >
                         <Card style={{ width: '100%' }} className='border-0  px-5'>
-                            <Card.Img variant="top" src={`http://localhost:4002/${product.image}`} className='w-75 mx-auto mt-5 mb-5' />
+                            <Card.Img variant="top" src={`${product.imageUrl}`} className='w-75 mx-auto mt-5 mb-5' />
                             <Card.Body className='mx-auto'>
                                 <Card.Title className='fs-2 fw-bolder mb-3'>{product.title}</Card.Title>
                                 <Card.Text>

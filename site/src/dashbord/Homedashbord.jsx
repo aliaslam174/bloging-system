@@ -78,7 +78,7 @@ const header = renderHeader();
     })
   }
   const imageBodyTemplate = (product) => {
-    return <img src={`http://localhost:4002/${product.image}`} alt={product.image} width={60}  className=" h-4rem shadow-2 border-round" />;
+    return <img src={`${product.imageUrl}`} alt={product.image} width={60}  className=" h-4rem shadow-2 border-round" />;
   };
   const actionBodyTemplate = (product) => {
     return (<>
