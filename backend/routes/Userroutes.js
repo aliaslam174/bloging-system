@@ -1,7 +1,9 @@
 const express=require('express')
 const router = express.Router();
+const cloudinary = require('cloudinary');
 const multer  = require('multer')
-const upload = multer({ dest: 'uploads/' })
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 const usercontroler=require("../controller/UserControler")
 const postctr=require('../controller/PostControler')

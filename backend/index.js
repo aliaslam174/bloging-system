@@ -21,7 +21,7 @@ app.use("/user",userRoutes)
 
 // db conect and server listen (4002)
 
-mongoose.connect('mongodb://127.0.0.1:27017/blog').then(()=>{
+mongoose.connect("mongodb+srv://aliaslam22246:4YqMspL89JWB9k50@cluster0.ia8nqr9.mongodb.net/blog").then(()=>{
     app.listen('4002',()=>{
         console.log('server is listen')
     })
