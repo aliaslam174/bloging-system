@@ -10,7 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
-
+console.log(import.meta.env.VITE_API_SERVER_URL)
   return (
     <>
    

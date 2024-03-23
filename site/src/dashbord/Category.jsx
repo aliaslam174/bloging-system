@@ -22,7 +22,7 @@ function Category() {
     
     } else {
       setIsButtonEnabled(false)
-      axios.post('http://localhost:4002/user/categories/creat', {
+      axios.post(`${import.meta.env.VITE_API_SERVER_URL}/user/categories/creat`, {
 
         name: category
 

@@ -25,10 +25,10 @@ function Detailpage() {
     const [isButtonEnabled, setIsButtonEnabled] = useState(false);
     const successmsg = () => toast("comments succesfully added ");
 
-
+  console.log(import.meta.env.VITE_API_SERVER_URL)
     useEffect(() => {
-        axios.get(`http://localhost:4002/user/getpostbyid/${parems.id}`).then((res) => {
-            console.log(res.data.data)
+        axios.get(`${import.meta.env.VITE_API_SERVER_URL}/user/getpostbyid/${parems.id}`).then((res) => {
+            console.log(res.data,"asdasd")
             setproduct((res.data.data))
 
         })
@@ -36,7 +36,7 @@ function Detailpage() {
     }, [])
 
     useEffect(() => {
-        axios.get(`http://localhost:4002/user/postcomments/${parems.id}`).then((res) => {
+        axios.get(`${import.meta.env.VITE_API_SERVER_URL}/user/postcomments/${parems.id}`).then((res) => {
             console.log(res.data.data)
 
             setAllcomment(res.data.data)
@@ -52,7 +52,7 @@ function Detailpage() {
         } else {
             // setLoading(true)
             setIsButtonEnabled(false)
-            axios.post('http://localhost:4002/user/createcomments', {
+            axios.post(`${import.meta.env.VITE_API_SERVER_URL}/user/createcomments`, {
                 comment: comments,
                 postid: parems.id
 

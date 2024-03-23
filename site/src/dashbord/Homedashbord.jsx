@@ -49,7 +49,7 @@ const renderHeader = () => {
 };
 const header = renderHeader();
   useEffect(() => {
-    axios.get('http://localhost:4002/user/getpost').then((res) => {
+    axios.get(`${import.meta.env.VITE_API_SERVER_URL}/user/getpost`).then((res) => {
       console.log(res)
       setProducts(res.data.data)
       setupdate(false)

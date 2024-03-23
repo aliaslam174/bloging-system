@@ -28,7 +28,7 @@ function Post() {
       alert('Empty Field')
     } else {
 
-      axios.post('http://localhost:4002/user/createpost', {
+      axios.post(`${import.meta.env.VITE_API_SERVER_URL}/user/createpost`, {
         title: title,
         body: body,
         category: category,

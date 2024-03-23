@@ -14,7 +14,7 @@ const [loading,setIsloading]=useState(false)
 
   useEffect(() => {
     setIsloading(true)
-    axios.get(`http://localhost:4002/user/posts/${(params.category !== undefined) ? params.category : ''}`).then((res) => {
+    axios.get(`${import.meta.env.VITE_API_SERVER_URL}/user/posts/${(params.category !== undefined) ? params.category : ''}`).then((res) => {
       // console.log(res.data.data)
 
       if(res.status==200){

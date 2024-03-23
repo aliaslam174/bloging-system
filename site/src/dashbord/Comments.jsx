@@ -48,7 +48,7 @@ const renderHeader = () => {
 const header = renderHeader();
 
   useEffect(() => {
-    axios.get('http://localhost:4002/user/getcomments').then((res) => {
+    axios.get(`${import.meta.env.VITE_API_SERVER_URL}/user/getcomments`).then((res) => {
       // console.log(res.data.data,"sadad")
    
       setProducts(res.data.data)
@@ -58,7 +58,7 @@ const header = renderHeader();
 
   const handleEdit = (id) => {
    
-    axios.put(`http://localhost:4002/user/update/${id}`,{
+    axios.put(`${import.meta.env.VITE_API_SERVER_URL}/user/update/${id}`,{
       
         status:"aprroved"
        

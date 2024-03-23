@@ -14,7 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 const [product,setProduct]=useState('')
-
+console.log(import.meta.env.VITE_API_SERVER_URL)  
   return (
     <>
 
