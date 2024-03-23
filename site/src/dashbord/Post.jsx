@@ -18,7 +18,7 @@ function Post() {
   const toast = useRef(null);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:4002/user/categories/all").then((res) => {
+    axios.get(`${import.meta.env.VITE_API_SERVER_URL}/user/categories/all`).then((res) => {
       setCategories(res.data);
     })
   }, [])
