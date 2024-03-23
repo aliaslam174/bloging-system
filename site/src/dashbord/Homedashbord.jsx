@@ -60,7 +60,7 @@ const header = renderHeader();
   }
   const handledelete = (id) => {
    
-    axios.delete(`http://localhost:4002/user/deletepost/${id}`).then((res) => {
+    axios.delete(`${import.meta.env.VITE_API_SERVER_URL}/user/deletepost/${id}`).then((res) => {
       console.log(res.status)
       
 
